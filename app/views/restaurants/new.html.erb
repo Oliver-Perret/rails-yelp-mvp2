@@ -1,0 +1,20 @@
+<h1> Add a restaurant </h1>
+
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name, label: 'Restaurant name please', error: 'A restaurant needs a name ...' , placeholder: "Ex: Le Jules Vernes"  %>
+    <%= f.input :address, placeholder: "Ex: 16 avenue des champs Elysée, 75008 Paris" %>
+    <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"], prompt: "Select your category" %>
+    <%= f.input :phone_number, as: :integer %>
+    <%=  f.button :submit, :class => "btn-primary" %>
+  <% end %>
+
+
+
+
+
+<!--
+  t.string "name"
+    t.string "address"
+    t.integer "phone_number"
+    t.string "category"
+ -->
